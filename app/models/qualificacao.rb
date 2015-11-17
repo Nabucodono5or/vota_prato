@@ -10,6 +10,6 @@ message: " - um numero entre 0 e 10"
     validates_associated :cliente, :restaurante    
 
     belongs_to :cliente
-    belogns_to :restaurante
+    belongs_to :restaurante
 
 end
