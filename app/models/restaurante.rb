@@ -8,6 +8,9 @@ class Restaurante < ActiveRecord::Base
 
     validate :primeira_letra_maiuscula
     
+    has_many :qualificacoes
+    has_and_belongs_to_many :pratos    
+
     private
     def primeira_letra_maiuscula
         errors.add(:nome, "a letra deve iniciar com maiuscula") unless nome =~/[A-Z].*/   
