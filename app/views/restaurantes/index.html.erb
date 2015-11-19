@@ -1,6 +1,27 @@
 <html>
-    <p>
-       Estou no controller de Restaurantes! 
-    </p>    
+    <title>Votação de pratos</title>
+    <body>
+        <h1>Listagem de Restaurantes </h1>
+
+        <table>
+          <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Especialidade</th>    
+          </tr>
+          <% @restaurantes.each do |restaurante| %> 
+          <tr>
+                <td><%= restaurante.id %></td>
+                <td><%= restaurante.nome %></td>
+                <td><%= restaurante.endereco %></td>
+                <td><%= restaurante.especialidade %></td>
+                <td>
+                    <%= link_to 'Exibir', action: 'show', id: restaurante %>                
+                </td>
+          </tr>       
+      <% end %>
+       </table>
+    </body>
 
 </html>
