@@ -2,19 +2,8 @@
     <title>Restaurantes - Cadastramento</title>
     <body>
         <h1>Adcionando restaurante</h1>
-        <ul>
-            <% @restaurante.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-            <% end %>        
-        </ul>        
+        <%= render partial: "form" %>
                 
-        <%= form_for @restaurante do |r| %>
-        Nome: <%= r.text_field :nome %><br />
-        Endereco: <%= r.text_field :endereco %><br />
-        Especialidade: <%= r.text_field :especialidade %><br />
-        <%= r.submit %>
-        <% end %>
-        
         <%= link_to 'Voltar', action: 'index' %>
     </body>
 
