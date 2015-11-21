@@ -17,6 +17,8 @@
             <b>Especialidade</b>
             <%= @restaurante.especialidade %>
         </p>
-
+        <br />
+        <%= link_to 'Editar', action: 'edit', id: @restaurante %>
+        <%= link_to 'voltar', action: 'index' %>
     </body>
 </html>
