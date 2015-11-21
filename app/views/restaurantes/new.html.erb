@@ -1,0 +1,14 @@
+<html>
+    <title>Restaurantes - Cadastramento</title>
+    <body>
+        <h1>Adcionando restaurante</h1>
+        <%= form_for @restaurante do |r| %>
+        Nome: <%= r.text_field :nome %><br />
+        Endereco: <%= r.text_field :endereco %><br />
+        Especialidade: <%= r.text_field :especialidade %><br />
+        <%= r.submit %>
+        <% end %>
+    
+    </body>
+
+</html>
