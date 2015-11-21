@@ -2,6 +2,12 @@
     <title>Restaurantes - Cadastramento</title>
     <body>
         <h1>Adcionando restaurante</h1>
+        <ul>
+            <% @restaurante.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>        
+        </ul>        
+                
         <%= form_for @restaurante do |r| %>
         Nome: <%= r.text_field :nome %><br />
         Endereco: <%= r.text_field :endereco %><br />
