@@ -33,6 +33,7 @@ class QualificacoesController < ApplicationController
         format.html { redirect_to @qualificacao, notice: 'Qualificacao was successfully created.' }
         format.json { render :show, status: :created, location: @qualificacao }
       else
+        preparar_form
         format.html { render :new }
         format.json { render json: @qualificacao.errors, status: :unprocessable_entity }
       end
@@ -47,6 +48,7 @@ class QualificacoesController < ApplicationController
         format.html { redirect_to @qualificacao, notice: 'Qualificacao was successfully updated.' }
         format.json { render :show, status: :ok, location: @qualificacao }
       else
+        preparar_form
         format.html { render :edit }
         format.json { render json: @qualificacao.errors, status: :unprocessable_entity }
       end
