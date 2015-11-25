@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :cliente_id %><br>
-    <%= f.collection_select(:cliente_id, Cliente.order(:nome), :id, :nome, :prompt => true) %> 
+    <%= f.collection_select(:cliente_id, @clientes, :id, :nome, :prompt => true) %> 
   </div>
   <div class="field">
     <%= f.label :restaurante_id %><br>
-    <%= f.collection_select(:restaurante_id, Restaurante.order(:nome), :id, :nome, :prompt => true) %>
+    <%= f.collection_select(:restaurante_id, @restaurantes, :id, :nome, :prompt => true) %>
   </div>
   <div class="field">
     <%= f.label :nota %><br>
