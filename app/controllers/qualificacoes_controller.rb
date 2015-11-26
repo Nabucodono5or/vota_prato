@@ -16,6 +16,14 @@ class QualificacoesController < ApplicationController
   def new
     preparar_form    
     @qualificacao = Qualificacao.new
+
+    if params[:cliente]
+        @qualificacao.cliente = Cliente.find(params[:cliente])
+    end
+    if params[:restaurante]
+        @qualificacao.restaurante = Restaurante.find(params[:restaurante])    
+    end
+    
   end
 
   # GET /qualificacoes/1/edit
