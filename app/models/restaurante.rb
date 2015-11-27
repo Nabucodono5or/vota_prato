@@ -11,6 +11,7 @@ class Restaurante < ActiveRecord::Base
     has_many :qualificacoes
     has_and_belongs_to_many :pratos    
     
+    haz_many :comentarios, as: :comentavel
     scope :massas, -> {where(especialidade: 'massas')}
     scope :recentes, -> {where(["created_at > ?",3.months.ago])}
 

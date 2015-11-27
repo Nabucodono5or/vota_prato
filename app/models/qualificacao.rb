@@ -12,4 +12,6 @@ message: " - um numero entre 0 e 10"
     belongs_to :cliente
     belongs_to :restaurante
 
+    has_many :comentarios, as: :comentavel
+
 end
