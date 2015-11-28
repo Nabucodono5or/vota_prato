@@ -31,7 +31,8 @@
                 <%= @restaurante.qualificacoes.average(:valor_gasto) %><br /><br />
       </p> 
     <%= novo_comentario @restaurante %>
-       
+    <br />
+    <%= comentarios @restaurante %>   
      <br />
         <%= link_to 'Editar', action: 'edit', id: @restaurante %> |
         <%= link_to 'voltar', action: 'index' %> |
