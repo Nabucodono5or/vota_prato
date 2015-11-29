@@ -1,4 +1,4 @@
-qrequire 'test_helper'
+require 'test_helper'
 
 class RestauranteTest < ActiveSupport::TestCase
     fixtures :restaurantes

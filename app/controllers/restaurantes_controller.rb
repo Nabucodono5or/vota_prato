@@ -56,4 +56,14 @@ class RestaurantesController < ApplicationController
            render action: 'edit' 
         end    
     end
+
+    def busca
+        @restaurante = Restaurante.find_by_nome(params[:nome])
+        if @restaurante
+            redirect_to :action => 'show', :id => @restaurante.id
+        else
+            flash[:notice] = 'Restaurante não encontrado.'
+            redirect_to :action => 'index'
+        end
+    end
 end
