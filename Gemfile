@@ -46,5 +46,9 @@ group :development do
   
   # paginação na web
   gem 'kaminari'
+
+  # tratamento de imagens
+  gem 'paperclip'
+ 
 end
 

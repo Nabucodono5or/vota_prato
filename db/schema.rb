@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151127000635) do
+ActiveRecord::Schema.define(version: 20151203191513) do
 
   create_table "clientes", force: :cascade do |t|
     t.string   "nome",       limit: 80
@@ -59,11 +59,15 @@ ActiveRecord::Schema.define(version: 20151127000635) do
   end
 
   create_table "restaurantes", force: :cascade do |t|
-    t.string   "nome",          limit: 80
-    t.string   "endereco",      limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.string   "especialidade", limit: 40
+    t.string   "nome",              limit: 80
+    t.string   "endereco",          limit: 255
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "especialidade",     limit: 40
+    t.string   "foto_file_name",    limit: 255
+    t.string   "foto_content_type", limit: 255
+    t.integer  "foto_file_size",    limit: 4
+    t.datetime "foto_updated_at"
   end
 
 end

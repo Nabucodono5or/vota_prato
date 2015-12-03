@@ -19,5 +19,8 @@ class Restaurante < ActiveRecord::Base
     def primeira_letra_maiuscula
         errors.add(:nome, "a letra deve iniciar com maiuscula") unless nome =~/[A-Z].*/   
     end
-
+    
+    has_attached_file :foto, styles:
+        { medium: "300x300>", thumb: "100x100>" }
+    validates_attachment_content_type :foto, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 end

@@ -1,3 +1,4 @@
+# coding utf-8
 class RestaurantesController < ApplicationController
     def index
         @restaurantes = Restaurante.order(:nome).page(params['page']).per(3)
@@ -31,7 +32,7 @@ class RestaurantesController < ApplicationController
     end
     
     def restaurante_params
-        params.require(:restaurante).permit(:nome, :endereco, :especialidade)    
+        params.require(:restaurante).permit(:nome, :endereco, :especialidade, :foto)    
     end
 
     def create
@@ -39,7 +40,7 @@ class RestaurantesController < ApplicationController
         
        if @restaurante.save
             redirect_to(action: "show", id: @restaurante )
-        else
+       else
             render action: "new"        
         end
     end
