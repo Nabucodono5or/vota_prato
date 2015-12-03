@@ -1,6 +1,6 @@
 class RestaurantesController < ApplicationController
     def index
-        @restaurantes = Restaurante.order :nome
+        @restaurantes = Restaurante.order(:nome).page(params['page']).per(3)
 
         respond_to do |format|
             format.html
