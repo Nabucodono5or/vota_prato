@@ -1,6 +1,8 @@
 language: ruby
 rvm:
   - "2.2.3"
+services:
+    - mysql
 script:
     - bundle exec rake
 addons:
