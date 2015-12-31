@@ -49,6 +49,8 @@ group :development do
 
   # tratamento de imagens
   gem 'paperclip'
- 
+
+  # inserindo o code climate na aplicação
+  gem "codeclimate-test-reporter", group: :test, require: nil 
 end
 
